@@ -64,10 +64,14 @@ def get_extent(extent_s,res_deg):
     
     minlon2,maxlon2,minlat2,maxlat2 = extent_s
     
-    minX_index = np.int(nlon/(maxlon1-minlon1)*(minlon2-minlon1))
-    maxX_index = np.int(nlon/(maxlon1-minlon1)*(maxlon2-minlon1)) 
-    minY_index = np.int(nlat/(maxlat1-minlat1)*(minlat2-minlat1)) 
-    maxY_index = np.int(nlat/(maxlat1-minlat1)*(maxlat2-minlat1))
+    minX_index = np.around((minlon2-minlon1)/res_deg).astype(int)
+    maxX_index = np.around((maxlon2-minlon1)/res_deg).astype(int)
+    if (maxX_index-minX_index)%2 == 0:
+        maxX_index = maxX_index - 1
+    minY_index = np.around((minlat2-minlat1)/res_deg).astype(int) 
+    maxY_index = np.around((maxlat2-minlat1)/res_deg).astype(int)
+    if (maxY_index-minY_index)%2 == 0:
+        maxY_index = maxY_index - 1
     
     extent_t = (lons[minX_index],lons[maxX_index],lats[minY_index],lats[maxY_index])
     return extent_t
@@ -93,10 +97,14 @@ def get_data(data_s,extent_s,res_deg):
     
     minlon2,maxlon2,minlat2,maxlat2 = extent_s
     
-    minX_index = np.int(nlon/(maxlon1-minlon1)*(minlon2-minlon1))
-    maxX_index = np.int(nlon/(maxlon1-minlon1)*(maxlon2-minlon1)) 
-    minY_index = np.int(nlat/(maxlat1-minlat1)*(minlat2-minlat1)) 
-    maxY_index = np.int(nlat/(maxlat1-minlat1)*(maxlat2-minlat1))
+    minX_index = np.around((minlon2-minlon1)/res_deg).astype(int)
+    maxX_index = np.around((maxlon2-minlon1)/res_deg).astype(int)
+    if (maxX_index-minX_index)%2 == 0:
+        maxX_index = maxX_index - 1
+    minY_index = np.around((minlat2-minlat1)/res_deg).astype(int) 
+    maxY_index = np.around((maxlat2-minlat1)/res_deg).astype(int)
+    if (maxY_index-minY_index)%2 == 0:
+        maxY_index = maxY_index - 1
     
     extent_t = (lons[minX_index],lons[maxX_index],lats[minY_index],lats[maxY_index])
     

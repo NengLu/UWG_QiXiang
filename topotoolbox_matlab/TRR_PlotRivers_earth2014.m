@@ -1,10 +1,11 @@
-%DEM = GRIDobj('../../../data/dem/Tibet_Earth2014.TBI2014.1min.order10800.tif');%
-%DEM = GRIDobj('../../../data/dem/Tibet_Earth2014.TBI2014.5min.order2160.tif');
-%DEM = GRIDobj('../../../data/dem/srtm_TRR_90m_lower.tif');
 DEM = GRIDobj('../../Data/dem/TRR_Earth2014.TBI2014.1min.order10800.tif');
-DEM.refmat(3,1) = 88.0083333335466;
-DEM.refmat(3,2) = 36.00833333332618;
+%DEM = GRIDobj('../../Data/dem/TRR_Earth2014.BED2014.1min.order10800.tif');
+DEM.refmat(3,1) = 88.0083333;
+DEM.refmat(3,2) = 35.9916667;
 
+%DEM = GRIDobj('../../Data/dem/TRR_SRTM.3s.size1200.tif');
+%DEM.refmat(3,1) = 87.9995833;
+%DEM.refmat(3,2) = 36.0004167;
 
 th_discharge = 500; 
 DEMf = fillsinks(DEM);
