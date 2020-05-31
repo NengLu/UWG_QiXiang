@@ -25,11 +25,11 @@ def array2geotiff_yx(fname, data, latRange, lonRange, dtype):
     """
     save GeoTiff file from the array of dem data
     input:
-        fname: save file name
-        data: elevation data, an array in size of (n_lat,n_lon) 
-        latRange: range of latitude, an array as [minlat,maxlat]
-        lonRange: range of longitude, an array as [minlon,maxlon]
-        dtype: dtype in gdal, as gdal.GDT_Byte or gdal.GDT_Float32
+    fname: save file name
+    data: elevation data, an array in size of (n_lat,n_lon) 
+    latRange: range of latitude, an array as [minlat,maxlat]
+    lonRange: range of longitude, an array as [minlon,maxlon]
+    dtype: dtype in gdal, as gdal.GDT_Byte or gdal.GDT_Float32
     """   
     nx = data.shape[1]
     ny = data.shape[0]
