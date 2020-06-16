@@ -69,7 +69,7 @@ Tutorials with worked examples can be found in the [tutorials](https://github.co
   ​       [3_02_Example_qixiang](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/3_02_Example_qixiang_topopy.ipynb)
 
 <center class="half">
-    <img src="pic/Tibet_Earth2014.TBI2014.5min.order20_Rivers.png"  width="350"/><img src="pic/The CF of the rivers and Topo in TRR (order 1080).png" width="350"/><img src="pic/TRR_Basin.png"  width="360"/>
+    <img src="pic/Tibet_Earth2014.TBI2014.5min.order20_Rivers.png"  width="320"/><img src="pic/The CF of the rivers and Topo in TRR (order 1080).png" width="320"/><img src="pic/TRR_Basin.png"  width="330"/>
 </center>
 
 ### Reference
