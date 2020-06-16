@@ -1,0 +1,9 @@
+numpy>=1.18.4
+matplotlib>=3.2.1
+cartopy>=0.17.0
+pyshp>=2.10
+gdal>=2.4.4
+scipy>=1.4.1
+pyshtools>=4.6.2
+scipy>=1.4.1
+scikit-image>=0.17.2
