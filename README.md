@@ -16,6 +16,7 @@ Qi Xiang: The god of the Yangtze River.
 It is recommended to install UWG_QiXiang and all its dependencies on your local machine. You may try it first through [Binder](https://mybinder.org/v2/gh/NengLu/UWG_QiXiang/master).
 
 In binder, if you run into some wrong results when plotting by *Cartopy*, change the data_img input without processing by np.flipud, for example:
+
 In local :
 
 ``` python 
@@ -52,24 +53,24 @@ Python >=3.7.6
 Tutorials with worked examples can be found in the [tutorials](https://github.com/NengLu/UWG_QiXiang/tree/master/tutorials) subdirectory, include:
 
 - #### Data load and plot
-  ​       [1_01_LoadnSmoothTopo_Earth2014](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/1_01_LoadnSmoothTopo_Earth2014.ipynb)
-  ​       [1_02_MapRivers_Earth2014nWDBII](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/1_02_MapRivers_Earth2014nWDBII.ipynb)
-  ​       [1_03_TopoRivers_Tibet_Earth2014nWDBII](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/1_03_TopoRivers_Tibet_Earth2014nWDBII.ipynb)
-  ​       [1_04_TopoRivers_Tibet_Earth2014_Cartopy](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/1_04_TopoRivers_Tibet_Earth2014_Cartopy.ipynb)
-  ​       [1_04_TopoRivers_Tibet_Earth2014_Cartopy_GMTcolor](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/1_04_TopoRivers_Tibet_Earth2014_Cartopy_GMTcolor.ipynb)
+  - [1_01_LoadnSmoothTopo_Earth2014](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/1_01_LoadnSmoothTopo_Earth2014.ipynb)
+  - [1_02_MapRivers_Earth2014nWDBII](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/1_02_MapRivers_Earth2014nWDBII.ipynb)
+  - [1_03_TopoRivers_Tibet_Earth2014nWDBII](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/1_03_TopoRivers_Tibet_Earth2014nWDBII.ipynb)
+  - [1_04_TopoRivers_Tibet_Earth2014_Cartopy](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/1_04_TopoRivers_Tibet_Earth2014_Cartopy.ipynb)
+  - [1_04_TopoRivers_Tibet_Earth2014_Cartopy_GMTcolor](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/1_04_TopoRivers_Tibet_Earth2014_Cartopy_GMTcolor.ipynb)
 
 - #### Calculate the Conformity Factor
-​       [2_00_MakeGeotiff_Earth2014_SRTM90m](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/2_00_MakeGeotiff_Earth2014_SRTM90m.ipynb)
-​       [2_00_RiverData](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/2_00_RiverData.ipynb)
-​       [2_01_ConformityFactor](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/2_01_ConformityFactor.ipynb)
-​       [2_02_ConformityFactor_Analysis](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/2_02_ConformityFactor_Analysis.ipynb)
+  - [2_00_MakeGeotiff_Earth2014_SRTM90m](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/2_00_MakeGeotiff_Earth2014_SRTM90m.ipynb)
+  - [2_00_RiverData](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/2_00_RiverData.ipynb)
+  - [2_01_ConformityFactor](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/2_01_ConformityFactor.ipynb)
+  - [2_02_ConformityFactor_Analysis](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/2_02_ConformityFactor_Analysis.ipynb)
 
 - #### Topographic analysis tools  (developing)
-  ​       [3_01_Example_topopy](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/3_01_Example_topopy.ipynb)
-  ​       [3_02_Example_qixiang](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/3_02_Example_qixiang_topopy.ipynb)
+  - [3_01_Example_topopy](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/3_01_Example_topopy.ipynb)
+  - [3_02_Example_qixiang](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/3_02_Example_qixiang_topopy.ipynb)
 
 <center class="half">
-    <img src="pic/Tibet_Earth2014.TBI2014.5min.order20_Rivers.png"  width="280"/><img src="pic/The CF of the rivers and Topo in TRR (order 1080).png" width="280"/><img src="pic/TRR_Basin.png"  width="290"/>
+    <img src="pic/Tibet_Earth2014.TBI2014.5min.order20_Rivers.png"  width="270"/><img src="pic/The CF of the rivers and Topo in TRR (order 1080).png" width="280"/><img src="pic/TRR_Basin.png"  width="290"/>
 </center>
 
 ### Reference
