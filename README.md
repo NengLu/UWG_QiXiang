@@ -1,7 +1,7 @@
 UWG_QiXiang
 =====
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NengLu/UWG_QiXiang/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NengLu/UWG_QiXiang/master?filepath=tutorials%2F0-StartHere_Binder.ipynb)
 
 UWG_QiXiang provides geomorphic analysis of the observational data or the results from the models built by [UWGeodyanmics](https://github.com/underworldcode/UWGeodynamics) and [Badlands](https://github.com/badlands-model). It is based on some topographic analysis tools such as [TopoToolbox](https://topotoolbox.wordpress.com/).
 
@@ -13,7 +13,7 @@ Qi Xiang: The god of the Yangtze River.
 
 
 ###  Installation
-It is recommended to install UWG_QiXiang and all its dependencies on your local machine. You may try it first through [Binder](https://mybinder.org/v2/gh/NengLu/UWG_QiXiang/master).
+It is recommended to install UWG_QiXiang and all its dependencies on your local machine. You may try it first through [Binder](https://mybinder.org/v2/gh/NengLu/UWG_QiXiang/master?filepath=tutorials%2F0-StartHere_Binder.ipynb).
 
 In binder, if you run into some wrong results when plotting by *Cartopy*, change the data_img input without processing by np.flipud, for example:
 
