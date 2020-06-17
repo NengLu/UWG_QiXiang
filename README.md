@@ -69,9 +69,11 @@ Tutorials with worked examples can be found in the [tutorials](https://github.co
   - [3_01_Example_topopy](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/3_01_Example_topopy.ipynb)
   - [3_02_Example_qixiang](https://github.com/NengLu/UWG_QiXiang/blob/master/tutorials/3_02_Example_qixiang_topopy.ipynb)
 
-<center class="half">
-    <img src="pic/Tibet_Earth2014.TBI2014.5min.order20_Rivers.png"  width="270"/><img src="pic/The CF of the rivers and Topo in TRR (order 1080).png" width="280"/><img src="pic/TRR_Basin.png"  width="290"/>
-</center>
+<table><tr>
+<td> <img src="pic/Tibet_Earth2014.TBI2014.5min.order20_Rivers.png" alt="Drawing" style="width: 250px;"/> </td>
+<td> <img src="pic/CF_order1080.png"  alt="Drawing" style="width: 250px;"/> </td>
+<td> <img src="pic/TRR_Basin.png" alt="Drawing" style="width: 250px;"/> </td>
+</tr></table>
 
 ### Reference
 Most functions in UWG_Qixiang are based on [TopoToolbox](https://topotoolbox.wordpress.com/) and [geolovic/topopy](https://github.com/geolovic/topopy).
