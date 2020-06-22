@@ -68,8 +68,8 @@ class Stream(Flow):
                           and output the numerated stream segments.
 
     get_klargestconncomps : Return k largest connected components in an instance of *Stream*                 
-    get_largerpart_lssorder : Get the part with strahler stream order (i-1) in the trunck
-    get_trunck : Extract trunk stream of the connected component by 
+    get_largerpart_lssorder : Get the part with strahler stream order (i-1) in the trunk
+    get_trunk : Extract trunk stream of the connected component by 
                  Strahler stream order and the size of stream nodes number       
     =========== 
     References
@@ -541,7 +541,7 @@ class Stream(Flow):
         else:
             return cc_arr, cc_size[:,0].astype(int)        
 
-    def get_trunck(self,ccs_arr,ccs_id):
+    def get_trunk(self,ccs_arr,ccs_id):
         """
         This function extract trunk stream (longest stream) of the connected component (cc),
         by Strahler stream order and the size of stream nodes number
@@ -553,13 +553,13 @@ class Stream(Flow):
         ===========   
         Returns
 
-        trunk_arr : *Numpy.ndarray*, array indicate the trunk with value = 1
+        trunk_arr : *Numpy.ndarray*, array indicate the trunk with value = k
         =========== 
         Example
     
         stream = Stream(dem=topo, flow=flow, threshold=threshold, verbose=False, thetaref=0.45, npoints=5)
         ccs_arr,ccs_id = stream.get_klargestconncomps(k=5,asgrid=False)
-        trunk_arr = stream.get_trunck(ccs_arr,ccs_id)
+        trunk_arr = stream.get_trunk(ccs_arr,ccs_id)
         ===========     
         References
         
@@ -606,13 +606,47 @@ class Stream(Flow):
                     l_norder = l_lssiorder
                     l_trunk = l_lssiorder + l_trunk
                 
-            trunk_arr[ix[l_trunk]] = 1      
+            trunk_arr[ix[l_trunk]] = k+1      
         trunk_arr = trunk_arr.reshape(self._dims)   
         return trunk_arr        
+    def get_trunk_output(self,trunk_arr,path):
+        """
+        This function output the coordinates of the trunk stream 
+        =========== 
+        Parameters
         
+        trunk_arr : *Numpy.ndarray*, array indicate the trunk with value = k
+        path : *Str*, path for the output text file
+        ===========   
+        Returns
+
+        text file: x, y, z, distance
+        =========== 
+        Example
+    
+        stream = Stream(dem=topo, flow=flow, threshold=threshold, verbose=False, thetaref=0.45, npoints=5)
+        ccs_arr,ccs_id = stream.get_klargestconncomps(k=5,asgrid=False)
+        trunk_arr = stream.get_trunk(ccs_arr,ccs_id)
+        stream.get_trunk_output(trunk_arr)
+        ===========     
+        """ 
+        cab = "x;y;z;distance"
+        n_trunk = trunk_arr.max()
+        for n in range(1,n_trunk+1):
+            w = trunk_arr == n
+            w = w.ravel()
+            I = w[self._ix]
+            ixc = self._ixc[I] # ixc of this trunk
+            ix = self._ix[I]   # ixc of this trunk
+            row,col = self.ind_2_cell(ix)
+            x, y = self.cell_2_xy(row, col)
+            out_arr = np.array((x, y, self._zx[I], self._dx[I])).T
+            fname = path + 'river' + str(n) +'.txt'
+            np.savetxt(fname, out_arr,fmt='%3.8f %3.8f %3.3f %3.3f', header=cab) 
+               
 def get_largerpart_lssorder(ncells, ix, ixc ,iorder,l_iorder, str_ord):
     """
-    This function gets the part with strahler stream order (i-1) in the trunck,
+    This function gets the part with strahler stream order (i-1) in the trunk,
     by comparing the nodes number of all less i-order streams in the connected component (cc)
     =========== 
     Parameters
@@ -621,12 +655,12 @@ def get_largerpart_lssorder(ncells, ix, ixc ,iorder,l_iorder, str_ord):
     ix  : *Numpy.array*, ix of this cc
     ixc : *Numpy.array*, ixc of this cc
     iorder : *Int*, the strahler stream order number
-    l_iorder : *List*, the index in ix of the part with order i in the trunck
+    l_iorder : *List*, the index in ix of the part with order i in the trunk
     str_ord : *Numpy.ndarray*, stream order of the grid nodes
     ===========   
     Returns
 
-    l_lssi : *List*, the index in ix of the part with order (i-1) in the trunck
+    l_lssi : *List*, the index in ix of the part with order (i-1) in the trunk
     """     
     head_id = ix[l_iorder[0]]
     
