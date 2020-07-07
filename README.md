@@ -71,6 +71,9 @@ Tutorials with worked examples can be found in the [tutorials](tutorials/) subdi
 - #### Topographic analysis tools  (developing)
   - [3_01_Example_topopy](tutorials/3_01_Example_topopy.ipynb)
   - [3_02_Example_qixiang](tutorials/3_02_Example_qixiang_topopy.ipynb)
+  
+- #### Note
+  - [River meanders and the theory of minimum variance](tutorials/Note_River meanders and the theory of minimum variance.ipynb)
 
 <table><tr>
 <td> <img src="pic/Tibet_Earth2014.TBI2014.5min.order20_Rivers.png" alt="Drawing" style="width: 250px;"/> </td>
